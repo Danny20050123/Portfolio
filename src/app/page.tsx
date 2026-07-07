@@ -1,23 +1,25 @@
-import Image from "next/image";
 import { AnimatedTabsHover } from "./hover-tab";
 import InteractiveModel from "../../components/model";
+import { TextFlippingBoardDemo } from "./flip-board";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-zinc-950 px-6 text-white">
-      <section className="max-w-3xl">
-        <AnimatedTabsHover />
+    <main className="min-h-screen bg-black px-6 text-white">
+      <div className="mx-auto grid min-h-screen grid-cols-1 items-center justify-center gap-8 md:grid-cols-[28rem_auto]">
+        <section className="w-full max-w-md">
+          <AnimatedTabsHover />
 
-        <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
-          Hi, I&apos;m Danny.
-        </h1>
+          <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
+            Hi, I&apos;m Danny.
+          </h1>
 
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-          I build software across mobile, web, and embedded systems.
-        </p>
-      </section>
+          <TextFlippingBoardDemo />
+        </section>
 
-      <InteractiveModel />
+        <div className="flex items-center justify-center">
+          <InteractiveModel />
+        </div>
+      </div>
     </main>
   );
 }

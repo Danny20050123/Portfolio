@@ -31,8 +31,8 @@ function PortfolioModel() {
       return;
     }
 
-    const targetRotationX = pointerPosition.current.y * 0.8;
-    const targetRotationY = pointerPosition.current.x * 1.4;
+    const targetRotationX = pointerPosition.current.y * 2;
+    const targetRotationY = pointerPosition.current.x * 2.8;
 
     modelRef.current.rotation.x = THREE.MathUtils.damp(
       modelRef.current.rotation.x,
@@ -52,7 +52,7 @@ function PortfolioModel() {
   return (
     <group ref={modelRef}>
       <Center>
-        <primitive object={scene} scale={7.5} />
+        <primitive object={scene} scale={9} />
       </Center>
     </group>
   );

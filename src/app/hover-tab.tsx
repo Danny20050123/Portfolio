@@ -71,6 +71,14 @@ export function AnimatedTabsHover() {
             data-id={tab.label}
             href={tab.href}
             variants={itemVariants}
+            whileHover={{
+              y: [0, 5, 0],
+            }}
+            transition={{
+              duration: 0.35,
+              times: [0, 0.5, 1],
+              ease: "easeInOut",
+            }}
             className="rounded-lg px-3 py-1.5 text-sm text-white"
           >
             {tab.label}
