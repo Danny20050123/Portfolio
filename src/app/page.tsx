@@ -2,9 +2,12 @@ import SideRays from "@/components/backgrounds/SideRays";
 import { AnimatedTabsHover } from "./hover-tab";
 import InteractiveModel from "../../components/model";
 import { TextFlippingBoardDemo } from "./flip-board";
+import { PortfolioDock } from "./portfolio-dock";
 
 export default function Home() {
   return (
+    <>
+    <PortfolioDock />
     <main
       id="home"
       className="relative min-h-screen overflow-hidden bg-black px-6 text-white"
@@ -40,5 +43,6 @@ export default function Home() {
         </div>
       </div>
     </main>
+    </>
   );
 }
