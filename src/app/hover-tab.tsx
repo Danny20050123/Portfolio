@@ -10,15 +10,15 @@ const TABS = [
   },
   {
     label: "Projects",
-    href: "#about",
+    href: "#projects",
   },
   {
     label: "Experiences",
-    href: "#services",
+    href: "#experiences",
   },
   {
-    label: "Contact",
-    href: "#contact",
+    label: "Resume",
+    href: "#resume",
   },
 ];
 
@@ -51,7 +51,7 @@ export function AnimatedTabsHover() {
   return (
     <motion.nav
       aria-label="Main navigation"
-      className="flex flex-row [perspective:1000px]"
+      className="flex w-full max-w-[calc(100vw-3rem)] flex-row [perspective:1000px]"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -79,7 +79,7 @@ export function AnimatedTabsHover() {
               times: [0, 0.5, 1],
               ease: "easeInOut",
             }}
-            className="rounded-lg px-3 py-1.5 text-sm text-white"
+            className="whitespace-nowrap rounded-lg px-2 py-1 text-[11px] text-white sm:px-3 sm:py-1.5 sm:text-sm"
           >
             {tab.label}
           </motion.a>
