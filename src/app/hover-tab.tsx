@@ -1,24 +1,27 @@
 "use client";
 
+import Link from "next/link";
 import { motion, type Variants } from "motion/react";
 import { AnimatedBackground } from "../../components/motion-primitives/animated-background";
+
+const MotionLink = motion.create(Link);
 
 const TABS = [
   {
     label: "Home",
-    href: "#home",
+    href: "/",
   },
   {
     label: "Projects",
-    href: "#projects",
+    href: "/projects",
   },
   {
     label: "Experiences",
-    href: "#experiences",
+    href: "/experiences",
   },
   {
     label: "Resume",
-    href: "#resume",
+    href: "/resume",
   },
 ];
 
@@ -66,7 +69,7 @@ export function AnimatedTabsHover() {
         enableHover
       >
         {TABS.map((tab) => (
-          <motion.a
+          <MotionLink
             key={tab.label}
             data-id={tab.label}
             href={tab.href}
@@ -82,7 +85,7 @@ export function AnimatedTabsHover() {
             className="whitespace-nowrap rounded-lg px-2 py-1 text-[11px] text-white sm:px-3 sm:py-1.5 sm:text-sm"
           >
             {tab.label}
-          </motion.a>
+          </MotionLink>
         ))}
       </AnimatedBackground>
     </motion.nav>
